@@ -1,0 +1,68 @@
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\export_cmmform.py", line 27, in exportCMM
+    wb_sample = load_workbook('static/cmmform/'+formname+'/'+filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1321, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/cmmform/BW_A1811036-FORM DATA CMM/BW_A1811036_FORM DATA.xlsx'
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\export_cmmform.py", line 27, in exportCMM
+    wb_sample = load_workbook('static/cmmform/'+formname+'/'+filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1321, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/cmmform/BW_A1811036-FORM DATA CMM/BW_A1811036_FORM DATA.xlsx'
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\export_cmmform.py", line 27, in exportCMM
+    wb_sample = load_workbook('static/cmmform/'+formname+'/'+filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1321, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/cmmform/BW_A1811036-FORM DATA CMM/BW_A1811036_FORM DATA.xlsx'
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\export_cmmform.py", line 27, in exportCMM
+    wb_sample = load_workbook('static/cmmform/'+formname+'/'+filename)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 344, in load_workbook
+    reader = ExcelReader(filename, read_only, keep_vba,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 123, in __init__
+    self.archive = _validate_archive(fn)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\openpyxl\reader\excel.py", line 95, in _validate_archive
+    archive = ZipFile(filename, 'r')
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\zipfile\__init__.py", line 1321, in __init__
+    self.fp = io.open(file, filemode)
+              ^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/cmmform/BW_A1811036-FORM DATA CMM/BW_A1811036_FORM DATA.xlsx'

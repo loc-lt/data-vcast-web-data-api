@@ -1,0 +1,72 @@
+-------------------Log----------------24/04/16-11:27:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 443, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 539, in chart_data
+    Systemp_log(traceback.format_exc(), "sixpack").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/04/16-11:27:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 443, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 539, in chart_data
+    Systemp_log(traceback.format_exc(), "sixpack").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/04/16-11:27:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 443, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 539, in chart_data
+    Systemp_log(traceback.format_exc(), "sixpack").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/04/16-11:27:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 443, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 539, in chart_data
+    Systemp_log(traceback.format_exc(), "sixpack").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required

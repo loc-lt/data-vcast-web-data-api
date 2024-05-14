@@ -1,0 +1,23 @@
+delete_permission
+---
+tags:
+  - delete_permission
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "id"
+      properties:
+        id:
+          type: "id"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

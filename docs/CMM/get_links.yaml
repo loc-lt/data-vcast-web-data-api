@@ -1,0 +1,14 @@
+/links/<string:reference>:
+get:
+tags:
+  - links
+parameters:
+  - in: path
+    name: reference
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

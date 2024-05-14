@@ -1,0 +1,80 @@
+-------------------Log----------------24/05/07-08:51:55
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 451, in get_form_manager
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- form_manager
+-------------------Log----------------24/05/07-11:22:40
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 183, in get_data
+    cursor.execute("SELECT Id, TimeStart, TimeSave, requester, CodePurpose, DMC, Line, CMMmachine,CMMCode, Operator, (CASE WHEN (SELECT count(value) FROM STRING_SPLIT(Product, ' ')) >= 2 THEN (SELECT dbo.ConcatValuesInColumn(Product, 2)) ELSE Product END) as Product, SUM(CASE WHEN Result != '' THEN 1 ELSE 0 END) AS Total,SUM(CASE WHEN id like '%No Tol%' THEN 1 ELSE 0 END) AS NoTol, SUM(CASE WHEN id like '%In Tol%' THEN 1 ELSE 0 END) AS InTol,SUM(CASE WHEN Result = 'OK'  and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS OK_Total,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS NG_Total,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%' or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS OK_C,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%'or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS NG_C,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS OK_CM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS NG_CM,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS OK_MM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS NG_MM FROM CMMdata where timesave >'"+datetime_start+"' and timesave <'"+datetime_end+"' and dmc like '%"+dmc+"%' and product like '%"+product+"%' and CMMmachine like '%"+machine+"%' GROUP BY DMC,TimeStart,requester, CodePurpose,CMMCode, Line, CMMmachine, Operator, TimeSave, Product")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Column 'CMMdata.id' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause. (8120) (SQLExecDirectW)")
+ ---- cmm_data
+-------------------Log----------------24/05/07-11:22:51
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 183, in get_data
+    cursor.execute("SELECT Id, TimeStart, TimeSave, requester, CodePurpose, DMC, Line, CMMmachine,CMMCode, Operator, (CASE WHEN (SELECT count(value) FROM STRING_SPLIT(Product, ' ')) >= 2 THEN (SELECT dbo.ConcatValuesInColumn(Product, 2)) ELSE Product END) as Product, SUM(CASE WHEN Result != '' THEN 1 ELSE 0 END) AS Total,SUM(CASE WHEN id like '%No Tol%' THEN 1 ELSE 0 END) AS NoTol, SUM(CASE WHEN id like '%In Tol%' THEN 1 ELSE 0 END) AS InTol,SUM(CASE WHEN Result = 'OK'  and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS OK_Total,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS NG_Total,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%' or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS OK_C,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%'or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS NG_C,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS OK_CM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS NG_CM,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS OK_MM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS NG_MM FROM CMMdata where timesave >'"+datetime_start+"' and timesave <'"+datetime_end+"' and dmc like '%"+dmc+"%' and product like '%"+product+"%' and CMMmachine like '%"+machine+"%' GROUP BY DMC,TimeStart,requester, CodePurpose,CMMCode, Line, CMMmachine, Operator, TimeSave, Product")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Column 'CMMdata.id' is invalid in the select list because it is not contained in either an aggregate function or the GROUP BY clause. (8120) (SQLExecDirectW)")
+ ---- cmm_data
+-------------------Log----------------24/05/07-11:24:43
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 183, in get_data
+    cursor.execute("SELECT Idx, TimeStart, TimeSave, requester, CodePurpose, DMC, Line, CMMmachine,CMMCode, Operator, (CASE WHEN (SELECT count(value) FROM STRING_SPLIT(Product, ' ')) >= 2 THEN (SELECT dbo.ConcatValuesInColumn(Product, 2)) ELSE Product END) as Product, SUM(CASE WHEN Result != '' THEN 1 ELSE 0 END) AS Total,SUM(CASE WHEN id like '%No Tol%' THEN 1 ELSE 0 END) AS NoTol, SUM(CASE WHEN id like '%In Tol%' THEN 1 ELSE 0 END) AS InTol,SUM(CASE WHEN Result = 'OK'  and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS OK_Total,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' THEN 1 ELSE 0 END) AS NG_Total,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%' or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS OK_C,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and (id like '% C\_%' ESCAPE '\\' or id like '% C.%'or id like '% C %' or id like '% CC %') THEN 1 ELSE 0 END) AS NG_C,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS OK_CM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id like '%CM%' THEN 1 ELSE 0 END) AS NG_CM,SUM(CASE WHEN Result = 'OK' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS OK_MM,SUM(CASE WHEN Result = 'NG' and id not like '%No Tol%' and id not like '%In Tol%' and id not like '%CM%' and id not like '% C\_%' ESCAPE '\\' and id not like '% C.%' and id not like '% C %' and id not like '% CC %' THEN 1 ELSE 0 END) AS NG_MM FROM CMMdata where timesave >'"+datetime_start+"' and timesave <'"+datetime_end+"' and dmc like '%"+dmc+"%' and product like '%"+product+"%' and CMMmachine like '%"+machine+"%' GROUP Idx, BY DMC,TimeStart,requester, CodePurpose,CMMCode, Line, CMMmachine, Operator, TimeSave, Product")
+pyodbc.ProgrammingError: ('42000', "[42000] [Microsoft][ODBC SQL Server Driver][SQL Server]Incorrect syntax near 'Idx'. (102) (SQLExecDirectW)")
+ ---- cmm_data
+-------------------Log----------------24/05/07-11:25:01
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 28, in get_products
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- products
+-------------------Log----------------24/05/07-11:25:01
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 73, in get_machines
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- machines
+-------------------Log----------------24/05/07-13:52:11
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1451, in update_purpose_data
+    cursor.execute("select * from [QC].[dbo].[CMMdata] where IDx = '" + id + "'")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1476, in update_purpose_data
+    Systemp_log(str(e), "update_purpose_data").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/05/07-13:52:39
+can only concatenate str (not "int") to str ---- update_purpose_data
+-------------------Log----------------24/05/07-14:47:44
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 73, in get_machines
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- machines
+-------------------Log----------------24/05/07-15:03:20
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 761, in create_cmm_sixpacking
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- cmm_sixpack
+-------------------Log----------------24/05/07-19:13:00
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 4162, in get_2dimage_thread_verification
+    with open("static/airleakage/pointmap.json", 'r') as json_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'static/airleakage/pointmap.json'
+ ---- get_2dimage_thread_verification

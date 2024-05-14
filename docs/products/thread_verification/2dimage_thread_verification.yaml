@@ -1,0 +1,14 @@
+/thread_verification/2D_image/machine=<string:machine_name>:
+get:
+tags:
+  - get_2dimage_thread_verification
+parameters:
+  - in: path
+    name: machine_name
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

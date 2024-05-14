@@ -1,0 +1,119 @@
+-------------------Log----------------24/04/26-09:28:37
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 2527, in get_air_tight_data
+    ret['data']['chart']['okNgData'].append({'NG': air_tight_df.values.tolist()[idx][0], 'OK': air_tight_df.values.tolist()[idx][1]})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'okNgData'
+ ---- air_tight_data
+-------------------Log----------------24/04/26-11:24:30
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:24:39
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:24:57
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:25:06
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:25:12
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:25:33
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:25:56
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:26:33
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:27:22
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-11:27:24
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3125, in get_cutting_data
+    ret['data']['chart']['dsaData'].append({'DSA_2': 0 if isNaN(cutting_df.values.tolist()[idx][0]) else cutting_df.values.tolist()[idx][0], 'DSA_3': 0 if isNaN(cutting_df.values.tolist()[idx][1]) else cutting_df.values.tolist()[idx][1], 'DSA_4': 0 if isNaN(cutting_df.values.tolist()[idx][2]) else cutting_df.values.tolist()[idx][2]})
+                                                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- cutting_data
+-------------------Log----------------24/04/26-14:47:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 124, in search_data
+    datafileid_str = get_data_filed(file_group, filename)["data"][0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 75, in get_data_filed
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.9.246; uid=sa; pwd=saa;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 386, in search_data
+    Systemp_log(traceback.format_exc(), "file_names1").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/04/26-14:47:22
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 124, in search_data
+    datafileid_str = get_data_filed(file_group, filename)["data"][0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 75, in get_data_filed
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.9.246; uid=sa; pwd=saa;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 50, in decorated
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 386, in search_data
+    Systemp_log(traceback.format_exc(), "file_names1").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required

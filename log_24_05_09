@@ -1,0 +1,59 @@
+-------------------Log----------------24/05/09-11:02:40
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 163, in get_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- cmm_data
+-------------------Log----------------24/05/09-11:03:49
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 171, in get_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- cmm_data
+-------------------Log----------------24/05/09-11:35:19
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1498, in export_CMM_form
+    formname = request.json["formName"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'formName'
+ ---- export_CMM_form
+-------------------Log----------------24/05/09-11:38:14
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1498, in export_CMM_form
+    formname = request.json["formName"]
+               ~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'formName'
+ ---- export_CMM_form
+-------------------Log----------------24/05/09-11:52:25
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\users.py", line 141, in login
+    if not check_exist(username):
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\users.py", line 20, in check_exist
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234; Database=QC; Trusted_Connection=No;', timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- login
+-------------------Log----------------24/05/09-16:46:36
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\electrical.py", line 337, in pie_chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- electrical_cost_update
+-------------------Log----------------24/05/09-16:48:05
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 4262, in get_info_data
+    point = points[mahang][i]
+         ~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- get_2dimage_thread_verification
+-------------------Log----------------24/05/09-17:04:53
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 245, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- cmm_chart_data

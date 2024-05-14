@@ -1,0 +1,31 @@
+duplicate_form
+---
+tags:
+  - duplicate_form
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "oldForm"
+        - "newForm"
+        - "fileName"
+      properties:
+        oldForm:
+          type: "oldForm"
+          example: "XXXXXX"
+        newForm:
+          type: "newForm"
+          example: "XXXXXX"
+        fileName:
+          type: "fileName"
+          example: "XXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

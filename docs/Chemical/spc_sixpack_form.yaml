@@ -1,0 +1,17 @@
+/spc_sixpack_form/<string:groupName>/<string:fileName>:
+get:
+tags:
+  - spc_sixpack_form
+parameters:
+  - in: path
+    name: groupName
+    required: true
+  - in: path
+    name: fileName
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

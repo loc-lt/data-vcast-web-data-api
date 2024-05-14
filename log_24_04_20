@@ -1,0 +1,63 @@
+-------------------Log----------------24/04/20-08:37:24
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\users.py", line 135, in login
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234; Database=QC; Trusted_Connection=No;', timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- login
+-------------------Log----------------24/04/20-10:13:39
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 741, in get_manual_scan_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- scanqr_data
+-------------------Log----------------24/04/20-10:47:22
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 276, in _load
+    payload = base64url_decode(payload_segment)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Invalid base64-encoded string: number of data characters (121) cannot be 1 more than a multiple of 4
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 41, in decorated
+    payload = jwt.decode(token, current_app.config['SECRET_KEY'],algorithms=["HS256"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 278, in _load
+    raise DecodeError("Invalid payload padding") from err
+jwt.exceptions.DecodeError: Invalid payload padding
+ ---- token_required
+-------------------Log----------------24/04/20-15:34:55
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 2174, in search_data_4
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- search_data_4
+-------------------Log----------------24/04/20-15:34:55
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 2378, in search_data_6
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- search_data_6

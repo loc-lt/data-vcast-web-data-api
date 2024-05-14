@@ -1,0 +1,14 @@
+/file_names/<string:fileGroup>:
+get:
+tags:
+  - file_names
+parameters:
+  - in: path
+    name: fileGroup
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

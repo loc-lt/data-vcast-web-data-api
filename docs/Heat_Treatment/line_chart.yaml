@@ -1,0 +1,14 @@
+/line_chart/<heatTreatmentCode>:
+get:
+tags:
+  - line_chart
+parameters:
+  - in: path
+    name: heatTreatmentCode
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

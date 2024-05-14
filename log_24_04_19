@@ -1,0 +1,35 @@
+-------------------Log----------------24/04/19-13:57:15
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 1540, in get_air_guage_gc_data
+    ret['data']['chart']['okNgData'].append({'NG': air_gauge_gc_df.values.tolist()[idx][0], 'OK': air_gauge_gc_df.values.tolist()[idx][1]})
+                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- air_guage_gc_data
+-------------------Log----------------24/04/19-13:57:37
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 1540, in get_air_guage_gc_data
+    ret['data']['chart']['okNgData'].append({'NG': air_gauge_gc_df.values.tolist()[idx][0], 'OK': air_gauge_gc_df.values.tolist()[idx][1]})
+                                                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- air_guage_gc_data
+-------------------Log----------------24/04/19-14:00:00
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 1458, in get_air_guage_gc_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=GC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- air_guage_gc_data
+-------------------Log----------------24/04/19-14:00:03
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 1543, in get_air_guage_gc_data
+    ret['data']['chart']['okNgData'].append({'NG': 0, 'OK': air_gauge_gc_df.values.tolist()[idx][1]})
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- air_guage_gc_data
+-------------------Log----------------24/04/19-14:00:13
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 1543, in get_air_guage_gc_data
+    ret['data']['chart']['okNgData'].append({'NG': 0, 'OK': air_gauge_gc_df.values.tolist()[idx][1]})
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- air_guage_gc_data

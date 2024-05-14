@@ -1,0 +1,158 @@
+-------------------Log----------------24/05/11-08:39:31
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 19, in get_permissions
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- get_permissions
+-------------------Log----------------24/05/11-08:39:32
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 64, in get_roles
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- get_roles
+-------------------Log----------------24/05/11-08:44:06
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 124, in search_data
+    datafileid_str = get_data_filed(file_group, filename)["data"][0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 75, in get_data_filed
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.9.246; uid=sa; pwd=saa;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- file_names1
+-------------------Log----------------24/05/11-08:59:44
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 443, in chart_data
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- sixpack
+-------------------Log----------------24/05/11-09:04:17
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 64, in get_roles
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- get_roles
+-------------------Log----------------24/05/11-10:00:10
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 268, in _load
+    header = json.loads(header_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 41, in decorated
+    payload = jwt.decode(token, current_app.config['SECRET_KEY'],algorithms=["HS256"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 270, in _load
+    raise DecodeError(f"Invalid header string: {e}") from e
+jwt.exceptions.DecodeError: Invalid header string: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+ ---- token_required
+-------------------Log----------------24/05/11-10:00:16
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 268, in _load
+    header = json.loads(header_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 41, in decorated
+    payload = jwt.decode(token, current_app.config['SECRET_KEY'],algorithms=["HS256"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 270, in _load
+    raise DecodeError(f"Invalid header string: {e}") from e
+jwt.exceptions.DecodeError: Invalid header string: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+ ---- token_required
+-------------------Log----------------24/05/11-10:00:26
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 268, in _load
+    header = json.loads(header_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 41, in decorated
+    payload = jwt.decode(token, current_app.config['SECRET_KEY'],algorithms=["HS256"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 270, in _load
+    raise DecodeError(f"Invalid header string: {e}") from e
+jwt.exceptions.DecodeError: Invalid header string: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+ ---- token_required
+-------------------Log----------------24/05/11-10:01:19
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 268, in _load
+    header = json.loads(header_data)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 341, in loads
+    s = s.decode(detect_encoding(s), 'surrogatepass')
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 41, in decorated
+    payload = jwt.decode(token, current_app.config['SECRET_KEY'],algorithms=["HS256"])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\jwt\api_jws.py", line 270, in _load
+    raise DecodeError(f"Invalid header string: {e}") from e
+jwt.exceptions.DecodeError: Invalid header string: 'utf-8' codec can't decode byte 0x88 in position 6: invalid start byte
+ ---- token_required
+-------------------Log----------------24/05/11-11:02:20
+can only concatenate str (not "int") to str ---- update_permission_name
+-------------------Log----------------24/05/11-14:42:49
+can only concatenate str (not "int") to str ---- update_permissions

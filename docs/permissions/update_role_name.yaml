@@ -1,0 +1,27 @@
+update_role_name
+---
+tags:
+  - update_role_name
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "role"
+        - "newName"
+      properties:
+        role:
+          type: "role"
+          example: "XXXXXXXX"
+        newName:
+          type: "newName"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

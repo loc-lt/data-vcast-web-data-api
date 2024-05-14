@@ -1,0 +1,210 @@
+-------------------Log----------------24/05/14-11:52:47
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 153, in login
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234; Database=QC; Trusted_Connection=No;', timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- login
+-------------------Log----------------24/05/14-13:24:24
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\products.py", line 4435, in get_pin_press_data
+    ret['data']['chart']['okNgData'].append({'NG': 0 if isNaN(pin_press_df.values.tolist()[idx][0]) else pin_press_df.values.tolist()[idx][0], 'OK': 0 if isNaN(pin_press_df.values.tolist()[idx][1]) else pin_press_df.values.tolist()[idx][1]})
+                                                                                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- pin_press_data
+-------------------Log----------------24/05/14-13:25:56
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\products.py", line 4438, in get_pin_press_data
+    ret['data']['chart']['okNgData'].append({'NG': 0, 'OK': 0 if isNaN(pin_press_df.values.tolist()[idx][1]) else pin_press_df.values.tolist()[idx][1]})
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- pin_press_data
+-------------------Log----------------24/05/14-13:25:58
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\products.py", line 4438, in get_pin_press_data
+    ret['data']['chart']['okNgData'].append({'NG': 0, 'OK': 0 if isNaN(pin_press_df.values.tolist()[idx][1]) else pin_press_df.values.tolist()[idx][1]})
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+ ---- pin_press_data
+-------------------Log----------------24/05/14-13:51:51
+Traceback (most recent call last):
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 397, in validate
+    decoded_token = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+ ---- validate_token
+-------------------Log----------------24/05/14-13:52:21
+Traceback (most recent call last):
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 398, in validate
+    decoded_token = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+ ---- validate_token
+-------------------Log----------------24/05/14-13:55:32
+Traceback (most recent call last):
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 398, in validate
+    decoded_token = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+ ---- validate_token
+-------------------Log----------------24/05/14-13:59:39
+Traceback (most recent call last):
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 398, in validate
+    decoded_token = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+ ---- validate_token
+-------------------Log----------------24/05/14-14:00:25
+Traceback (most recent call last):
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 263, in _load
+    header_data = base64url_decode(header_segment)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\utils.py", line 33, in base64url_decode
+    return base64.urlsafe_b64decode(input_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 134, in urlsafe_b64decode
+    return b64decode(s)
+           ^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\base64.py", line 88, in b64decode
+    return binascii.a2b_base64(s, strict_mode=validate)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+binascii.Error: Incorrect padding
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\users.py", line 399, in validate
+    decoded_token = jwt.decode(token, current_app.config['SECRET_KEY'], algorithms=["HS256"])
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 210, in decode
+    decoded = self.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jwt.py", line 151, in decode_complete
+    decoded = api_jws.decode_complete(
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 198, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ^^^^^^^^^^^^^^^
+  File "C:\Users\loclt\AppData\Local\Programs\Python\Python311\Lib\site-packages\jwt\api_jws.py", line 265, in _load
+    raise DecodeError("Invalid header padding") from err
+jwt.exceptions.DecodeError: Invalid header padding
+ ---- validate_token
+-------------------Log----------------24/05/14-14:51:59
+Traceback (most recent call last):
+  File "c:\Users\Admin\OneDrive - VNU-HCMUS\Desktop\WEB_DATA_API_PERMISSIONS\WEB_DATA_API\auth_middleware.py", line 187, in decorated
+    return func(*args, **kwargs, role = payload['role'], permissions = payload['permissions'])
+                                                                       ~~~~~~~^^^^^^^^^^^^^^^
+KeyError: 'permissions'
+ ---- token_required_and_permissions

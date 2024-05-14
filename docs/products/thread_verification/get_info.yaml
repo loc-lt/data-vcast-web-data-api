@@ -1,0 +1,14 @@
+/thread_verification/get_info/dmc=<string:dmc>:
+get:
+tags:
+  - get_info_data
+parameters:
+  - in: path
+    name: dmc
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

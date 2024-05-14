@@ -1,0 +1,14 @@
+/sixpack_forms/<string:dmc>:
+get:
+tags:
+  - get_sixpack_forms
+parameters:
+  - in: path
+    name: dmc
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

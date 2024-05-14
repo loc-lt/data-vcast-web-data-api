@@ -1,0 +1,209 @@
+-------------------Log----------------24/04/25-11:02:50
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1233, in save_new_form
+    form_name = request.json['formName']
+                ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 558, in json
+    return self.get_json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:12:46
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1233, in save_new_form
+    form_name = request.json['formName']
+                ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 558, in json
+    return self.get_json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:14:53
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1233, in save_new_form
+    form_name = request.json['formName']
+                ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 558, in json
+    return self.get_json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:14:56
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1233, in save_new_form
+    form_name = request.json['formName']
+                ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 558, in json
+    return self.get_json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:17:13
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1221, in save_new_form
+    form_name = request.json['formName']
+                ^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 558, in json
+    return self.get_json()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 604, in get_json
+    return self.on_json_loading_failed(None)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\wrappers.py", line 130, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\wrappers\request.py", line 647, in on_json_loading_failed
+    raise UnsupportedMediaType(
+werkzeug.exceptions.UnsupportedMediaType: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+ ---- edit_form
+-------------------Log----------------24/04/25-11:31:35
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1256, in save_new_form
+    uploaded_file.save(folder_path)
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\werkzeug\datastructures\file_storage.py", line 125, in save
+    dst = open(dst, "wb")
+          ^^^^^^^^^^^^^^^
+PermissionError: [Errno 13] Permission denied: 'C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/BW_A1811036_TEST'
+ ---- edit_form
+-------------------Log----------------24/04/25-11:33:03
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1254, in save_new_form
+    os.makedirs('C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/' + form_name)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/BW_A1811036_TEST'
+ ---- edit_form
+-------------------Log----------------24/04/25-11:41:28
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1254, in save_new_form
+    os.makedirs('C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/' + form_name)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/BW_A1811036_TEST'
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:41:51
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1264, in save_new_form
+    info["circleNum"],
+    ~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:42:15
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1254, in save_new_form
+    os.makedirs('C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/' + form_name)
+  File "<frozen os>", line 225, in makedirs
+FileExistsError: [WinError 183] Cannot create a file when that file already exists: 'C:/inetpub/wwwroot/WEB_DATA_API/cmm_forms/BW_A1811036_TEST'
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:42:31
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1265, in save_new_form
+    info["circleNum"],
+    ~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:43:56
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1266, in save_new_form
+    info["circleNum"],
+    ~~~~^^^^^^^^^^^^^
+TypeError: string indices must be integers, not 'str'
+ ---- save_new_form
+-------------------Log----------------24/04/25-11:49:06
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1267, in save_new_form
+    info["circleNum"],
+    ~~~~^^^^^^^^^^^^^
+KeyError: 'circleNum'
+ ---- save_new_form
+-------------------Log----------------24/04/25-14:28:18
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1223, in save_new_form
+    return jsonify(request), 200
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type LocalProxy is not JSON serializable
+ ---- save_new_form
+-------------------Log----------------24/04/25-14:29:04
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1224, in save_new_form
+    return jsonify(request), 200
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\__init__.py", line 170, in jsonify
+    return current_app.json.response(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 215, in response
+    f"{self.dumps(obj, **dump_args)}\n", mimetype=self.mimetype
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 180, in dumps
+    return json.dumps(obj, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\json\encoder.py", line 258, in iterencode
+    return _iterencode(o, 0)
+           ^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\flask\json\provider.py", line 120, in _default
+    raise TypeError(f"Object of type {type(o).__name__} is not JSON serializable")
+TypeError: Object of type LocalProxy is not JSON serializable
+ ---- save_new_form
+-------------------Log----------------24/04/25-14:41:06
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\CMM.py", line 1218, in save_new_form
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- save_new_form

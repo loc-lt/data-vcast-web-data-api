@@ -1,0 +1,29 @@
+save_form_sixpack
+---
+tags:
+  - save_form_sixpack
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "productDmc"
+        - "updatedData"
+      properties:
+        productDmc:
+          type: "productDmc"
+          example: 'xxxxxx'
+        updatedData:
+          type: "updatedData"
+          example: [{"CMM": "aaa", "Name": "bbb"},
+                    {"CMM": "AAA", "Name": "BBB"},
+                    ...]
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

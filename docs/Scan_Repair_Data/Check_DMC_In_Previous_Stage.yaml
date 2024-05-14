@@ -1,0 +1,27 @@
+Check_DMC_In_Previous_Stage
+---
+tags:
+  - Check_DMC_In_Previous_Stage
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "StageName"
+        - "DMC"
+      properties:
+        StageName:
+          type: "StageName"
+          example: "XXXXXXXX"
+        DMC:
+          type: "DMC"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

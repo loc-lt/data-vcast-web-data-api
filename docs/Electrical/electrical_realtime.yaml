@@ -1,0 +1,14 @@
+/electrical_realtime/term_serch=<string:term>:
+get:
+tags:
+  - electrical_realtime
+parameters:
+  - in: path
+    name: term
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

@@ -1,0 +1,17 @@
+Get_KhuVuc_OK_Product_TheoCa_New
+---
+tags:
+  - Get_KhuVuc_OK_Product_TheoCa_New
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

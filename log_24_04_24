@@ -1,0 +1,7 @@
+-------------------Log----------------24/04/24-10:31:11
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\products.py", line 3261, in get_air_tight_spain_data
+    ret['data']['chart']['okNgData'].append({'NG': air_tight_spain_df.values.tolist()[idx][0], 'OK': air_tight_spain_df.values.tolist()[idx][1]})
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'okNgData'
+ ---- air_tight_spain_data

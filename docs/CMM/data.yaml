@@ -1,0 +1,47 @@
+cmm_data
+---
+tags:
+  - cmm_data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "dayStart"
+        - "dayEnd"
+        - "timeStart"
+        - "timeEnd"
+        - "product"
+        - "machine"
+        - "dmc"
+      properties:
+        dayStart:
+          type: "dayStart"
+          example: "yyyy-mm-dd"
+        dayEnd:
+          type: "dayEnd"
+          example: "yyyy-mm-dd"
+        timeStart:
+          type: "timeStart"
+          example: "hh:mm:ss"
+        timeEnd:
+          type: "timeEnd"
+          example: "hh:mm:ss"
+        product:
+          type: "product"
+          example: "XXXXXX"
+        machine:
+          type: "machine"
+          example: "XXXXXX"
+        dmc:
+          type: "dmc"
+          example: "XXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

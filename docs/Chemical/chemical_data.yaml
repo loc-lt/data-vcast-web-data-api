@@ -1,0 +1,43 @@
+optical_division_data
+---
+tags:
+  - optical_division_data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "dayStart"
+        - "dayEnd"
+        - "timeStart"
+        - "timeEnd"
+        - "groupName"
+        - "fileName"
+      properties:
+        dayStart:
+          type: "dayStart"
+          example: "yyyy-mm-dd"
+        dayEnd:
+          type: "dayEnd"
+          example: "yyyy-mm-dd"
+        timeStart:
+          type: "timeStart"
+          example: "hh:mm:ss"
+        timeEnd:
+          type: "timeEnd"
+          example: "hh:mm:ss"
+        groupName:
+          type: "groupName"
+          example: "XXXXXX"
+        fileName:
+          type: "fileName"
+          example: "XXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

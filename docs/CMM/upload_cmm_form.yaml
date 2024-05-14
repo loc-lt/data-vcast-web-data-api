@@ -1,0 +1,26 @@
+upload_cmm_form
+---
+tags:
+  - upload_cmm_form
+parameters:
+  - in: path
+    name: ref
+    required: true
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "data"
+      properties:
+        data:
+          type: "data"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

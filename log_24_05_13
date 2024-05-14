@@ -1,0 +1,302 @@
+-------------------Log----------------24/05/13-08:11:56
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 124, in search_data
+    datafileid_str = get_data_filed(file_group, filename)["data"][0]
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\chemical.py", line 75, in get_data_filed
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.9.246; uid=sa; pwd=saa;Database=SPC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- file_names1
+-------------------Log----------------24/05/13-10:22:09
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: delete_permission() got an unexpected keyword argument 'role'
+ ---- token_required
+-------------------Log----------------24/05/13-10:26:55
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 426, in delete_permission
+    cursor.execute("select * from [QC].[dbo].[Permission_Name] where Id = '" + id + "'")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+TypeError: can only concatenate str (not "int") to str
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 463, in delete_permission
+    Systemp_log(str(e), "delete_permission").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/05/13-10:27:04
+can only concatenate str (not "int") to str ---- delete_permission
+-------------------Log----------------24/05/13-10:37:54
+can only concatenate str (not "int") to str ---- update_role_name
+-------------------Log----------------24/05/13-10:48:16
+can only concatenate str (not "int") to str ---- update_role_name
+-------------------Log----------------24/05/13-11:07:48
+'RoleName' ---- delete_role
+-------------------Log----------------24/05/13-13:01:01
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 19, in get_permissions
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- get_permissions
+-------------------Log----------------24/05/13-13:10:38
+'role' ---- delete_role
+-------------------Log----------------24/05/13-13:10:49
+can only concatenate str (not "int") to str ---- delete_role
+-------------------Log----------------24/05/13-14:29:41
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 143, in add_new_permission
+    biggest_id = biggest_id[0]
+                 ~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 179, in add_new_permission
+    Systemp_log(str(e), "add_new_permission").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/05/13-14:29:52
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 143, in add_new_permission
+    biggest_id = biggest_id[0]
+                 ~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 179, in add_new_permission
+    Systemp_log(str(e), "add_new_permission").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/05/13-14:30:08
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 143, in add_new_permission
+    biggest_id = biggest_id[0]
+                 ~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 179, in add_new_permission
+    Systemp_log(str(e), "add_new_permission").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Systemp_log.__init__() takes 2 positional arguments but 3 were given
+ ---- token_required
+-------------------Log----------------24/05/13-14:32:51
+'int' object is not subscriptable ---- add_new_permission
+-------------------Log----------------24/05/13-14:33:07
+'int' object is not subscriptable ---- add_new_permission
+-------------------Log----------------24/05/13-14:34:33
+'int' object is not subscriptable ---- add_new_permission
+-------------------Log----------------24/05/13-14:36:27
+'int' object is not subscriptable ---- add_new_permission
+-------------------Log----------------24/05/13-14:37:33
+'int' object is not subscriptable ---- add_new_permission
+-------------------Log----------------24/05/13-15:09:34
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:09:34
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:09:34
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:09:34
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:41
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:41
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:41
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:41
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:43
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:44
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:44
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:44
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:46
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:47
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:47
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:47
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:47
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:11:47
+'permissionName' ---- add_new_permission
+-------------------Log----------------24/05/13-15:14:52
+'id' ---- delete_permission
+-------------------Log----------------24/05/13-15:14:55
+'id' ---- delete_permission
+-------------------Log----------------24/05/13-15:14:58
+'id' ---- delete_permission
+-------------------Log----------------24/05/13-15:21:03
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 218, in add_new_roles
+    biggest_id = biggest_id[0]
+                 ~~~~~~~~~~^^^
+TypeError: 'int' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\auth_middleware.py", line 119, in decorated
+    return func(*args, **kwargs, role = payload['role'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 257, in add_new_roles
+    11(str(e), "add_new_role").append_new_line()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not callable
+ ---- token_required

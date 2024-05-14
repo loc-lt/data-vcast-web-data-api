@@ -1,0 +1,23 @@
+delete_role
+---
+tags:
+  - delete_role
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "role"
+      properties:
+        role:
+          type: "role"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

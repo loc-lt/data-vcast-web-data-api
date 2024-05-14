@@ -1,0 +1,23 @@
+import_data
+---
+tags:
+  - import_data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "data"
+      properties:
+        data:
+          type: "data"
+          example: xxxx
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

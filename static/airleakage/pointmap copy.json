@@ -1,0 +1,81 @@
+{
+    "A2012003": [
+        {
+            "position": [
+                1060,
+                194
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                891,
+                295
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                980,
+                286
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                861,
+                308
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                847,
+                455
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                949,
+                563
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                1058,
+                429
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                1063,
+                341
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                273,
+                324
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                361,
+                384
+            ],
+            "radius": 7
+        },
+        {
+            "position": [
+                236,
+                432
+            ],
+            "radius": 7
+        }
+    ]
+}

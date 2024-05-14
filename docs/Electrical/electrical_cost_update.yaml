@@ -1,0 +1,31 @@
+/electrical_cost_update:
+---
+tags:
+  - electrical_cost_update
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "off_peak_hour"
+        - "normal_hour"
+        - "rush_hour"
+      properties:
+        off_peak_hour:
+          type: "off_peak_hour"
+          example: "XXXXXXXX"
+        normal_hour:
+          type: "normal_hour"
+          example: "XXXXXXXX"
+        rush_hour:
+          type: "rush_hour"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

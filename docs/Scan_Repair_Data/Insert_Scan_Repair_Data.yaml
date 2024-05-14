@@ -1,0 +1,35 @@
+Insert_Scan_Repair_Data
+---
+tags:
+  - Insert_Scan_Repair_Data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "MSNV"
+        - "KhuVuc"
+        - "Tram"
+        - "DMC_Product"
+      properties:
+        MSNV:
+          type: "MSNV"
+          example: XXXXXXXX"
+        KhuVuc:
+          type: "KhuVuc"
+          example: XXXXXXXX"
+        Tram:
+          type: "Tram"
+          example: "XXXXXXXX"
+        DMC_Product:
+          type: "DMC_Product"
+          example: "XXXXXXXX"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

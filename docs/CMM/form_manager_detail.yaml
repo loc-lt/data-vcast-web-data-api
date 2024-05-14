@@ -1,0 +1,14 @@
+/form_manager/<string:form_name>:
+get:
+tags:
+  - form_manager_detail
+parameters:
+  - in: path
+    name: form_name
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

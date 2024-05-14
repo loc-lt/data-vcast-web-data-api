@@ -1,0 +1,27 @@
+export_CMM_form
+---
+tags:
+  - export_CMM_form
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "formName"
+        - "dmc"
+      properties:
+        formName:
+          type: "formName"
+          example: "xxxxxx"
+        dmc:
+          type: "dmc"
+          example: ["yyyyyy", "zzzzzz"]
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

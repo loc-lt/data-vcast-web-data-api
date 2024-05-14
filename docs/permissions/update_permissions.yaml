@@ -1,0 +1,24 @@
+update_permissions
+---
+tags:
+  - update_permissions
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "data"
+      properties:
+        data:
+          type: "data"
+          example: [{"role": "xxxxxx", "permissions": "xxxxxx"}, 
+                              {"role": "yyyyyy", "permissions": "yyyyyy"}]
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

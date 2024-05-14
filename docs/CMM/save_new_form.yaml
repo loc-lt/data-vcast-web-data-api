@@ -1,0 +1,37 @@
+save_new_form
+---
+tags:
+  - save_new_form
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "data"
+        - "formName"
+        - "fileName"
+        - "updatedData"
+      properties:
+        data:
+          type: "data"
+          example: xxxx
+        formName:
+          type: "formName"
+          example: 'xxxxxx'
+        fileName:
+          type: "fileName"
+          example: 'xxxxxx'
+        updatedData:
+          type: "updatedData"
+          example: [{"circleNum": "aaa", "characteristic": "bbb", "link": "ccc"},
+                    {"circleNum": "AAA", "characteristic": "BBB", "link": "CCC"},
+                    ...]
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

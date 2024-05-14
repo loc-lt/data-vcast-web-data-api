@@ -1,0 +1,34 @@
+-------------------Log----------------24/03/29-09:50:49
+Traceback (most recent call last):
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 276, in connect
+    sock = self.retry.call_with_retry(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\retry.py", line 46, in call_with_retry
+    return do()
+           ^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 277, in <lambda>
+    lambda: self._connect(), lambda error: self.disconnect(error)
+            ^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 639, in _connect
+    raise err
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 627, in _connect
+    sock.connect(socket_address)
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\inetpub\wwwroot\WEB_DATA_API\users.py", line 177, in login
+    redis_client.set(username, token)
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\commands\core.py", line 2342, in set
+    return self.execute_command("SET", *pieces, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\client.py", line 540, in execute_command
+    conn = self.connection or pool.get_connection(command_name, **options)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 1104, in get_connection
+    connection.connect()
+  File "C:\Users\Vcast-Server\AppData\Local\Programs\Python\Python312\Lib\site-packages\redis\connection.py", line 282, in connect
+    raise ConnectionError(self._error_message(e))
+redis.exceptions.ConnectionError: Error 10061 connecting to localhost:6379. No connection could be made because the target machine actively refused it.
+ ---- sixpack

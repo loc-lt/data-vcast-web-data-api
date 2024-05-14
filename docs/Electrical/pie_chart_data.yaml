@@ -1,0 +1,27 @@
+pie_chart
+---
+tags:
+  - pie_chart
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "dayStart"
+        - "dayEnd"
+      properties:
+        dayStart:
+          type: "dayStart"
+          example: "yyyy-mm-dd"
+        dayEnd:
+          type: "dayEnd"
+          example: "yyyy-mm-dd"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

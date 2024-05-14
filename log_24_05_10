@@ -1,0 +1,28 @@
+-------------------Log----------------24/05/10-15:38:20
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 64, in get_roles
+    conn = pyodbc.connect('Driver={SQL Server}; Server=192.168.8.21; uid=sa; pwd=1234;Database=QC; Trusted_Connection=No;',timeout=1)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pyodbc.OperationalError: ('HYT00', '[HYT00] [Microsoft][ODBC SQL Server Driver]Login timeout expired (0) (SQLDriverConnect)')
+ ---- get_roles
+-------------------Log----------------24/05/10-16:03:02
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 87, in get_roles
+    role, role_name, permissions = item
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+ ---- get_roles
+-------------------Log----------------24/05/10-16:03:02
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 87, in get_roles
+    role, role_name, permissions = item
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+ ---- get_roles
+-------------------Log----------------24/05/10-16:03:02
+Traceback (most recent call last):
+  File "C:\inetpub\wwwroot\WEB_DATA_API\permissions.py", line 87, in get_roles
+    role, role_name, permissions = item
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: too many values to unpack (expected 3)
+ ---- get_roles

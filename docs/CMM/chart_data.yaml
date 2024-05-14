@@ -1,0 +1,31 @@
+cmm_chart_data
+---
+tags:
+  - cmm_chart_data
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "timeStart"
+        - "timeEnd"
+        - "cmmMachine"
+      properties:
+        timeStart:
+          type: "timeStart"
+          example: "yyyy-mm-dd"
+        timeEnd:
+          type: "timeEnd"
+          example: "yyyy-mm-dd"
+        cmmMachine:
+          type: "cmmMachine"
+          example: ["xxxxxx", "yyyyyy"]
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

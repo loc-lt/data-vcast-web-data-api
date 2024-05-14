@@ -1,0 +1,14 @@
+/dmc_data/<string:dmc>:
+get:
+tags:
+  - dmc_data
+parameters:
+  - in: path
+    name: dmc
+    required: true
+responses:
+  200:
+    description: Redirects to the original link
+
+  400:
+    description: not found

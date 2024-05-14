@@ -1,0 +1,31 @@
+register
+---
+tags:
+  - register
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "userName"
+        - "displayName"
+        - "password"
+      properties:
+        userName:
+          type: "userName"
+          example: 'xxxxxx'
+        displayName:
+          type: "displayName"
+          example: 'xxxxxx'
+        password:
+          type: "password"
+          example: 'xxxxxx'
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

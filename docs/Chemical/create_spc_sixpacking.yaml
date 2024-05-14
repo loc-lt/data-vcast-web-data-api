@@ -1,0 +1,47 @@
+create_spc_sixpacking
+---
+tags:
+  - create_spc_sixpacking
+parameters:
+  - name: body
+    description: The body should contain the insert data
+    in: body
+    required: true
+    schema:
+      type: object
+      required:
+        - "groupName"
+        - "fileName"
+        - "name"
+        - "dayStart"
+        - "dayEnd"
+        - "timeStart"
+        - "timeEnd"
+      properties:
+        groupName:
+          type: "groupName"
+          example: "xxxxxxx"
+        fileName:
+          type: "fileName"
+          example: "xxxxxx"
+        name:
+          type: "name"
+          example: "xxxxxx"
+        dayStart:
+          type: "dayStart"
+          example: "yyyy-mm-dd"
+        dayEnd:
+          type: "dayEnd"
+          example: "yyyy-mm-dd"
+        timeStart:
+          type: "timeStart"
+          example: "hh:mm:ss"
+        timeEnd:
+          type: "timeEnd"
+          example: "hh:pp:ss"
+responses:
+  201:
+    description: When a data insert success
+
+  400:
+    description: Fails to insert due to bad request data

@@ -1,0 +1,227 @@
+{
+    "A2012003": [
+        {
+            "position": [
+                479,
+                179
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                226,
+                332
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                359,
+                315
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                180,
+                349
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                160,
+                569
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                314,
+                732
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                476,
+                531
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                484,
+                400
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                984,
+                373
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                1115,
+                465
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                927,
+                536
+            ],
+            "radius": 10
+        }
+    ],
+    "A2012004": [
+        {
+            "position": [
+                242,
+                170
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                510,
+                325
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                323,
+                411
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                145,
+                438
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                124,
+                614
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                278,
+                745
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                441,
+                584
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                448,
+                479
+            ],
+            "radius": 10
+        },
+        {
+            "position": [
+                969,
+                386
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                1129,
+                380
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                1021,
+                550
+            ],
+            "radius": 12
+        }
+    ],
+    "A2303121": [
+        {
+            "position": [
+                1174,
+                527
+            ],
+            "radius": 14
+        },
+        {
+            "position": [
+                1030,
+                323
+            ],
+            "radius": 14
+        },
+        {
+            "position": [
+                314,
+                116
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                575,
+                263
+            ],
+            "radius": 12
+        },
+        {
+            "position": [
+                806,
+                580
+            ],
+            "radius": 14
+        },
+        {
+            "position": [
+                816,
+                341
+            ],
+            "radius": 14
+        },
+        {
+            "position": [
+                978,
+                428
+            ],
+            "radius": 14
+        }
+    ],
+    "A2303123": [
+        {
+            "position": [
+                513,
+                585
+            ],
+            "radius": 20
+        },
+        {
+            "position": [
+                872,
+                901
+            ],
+            "radius": 20
+        }
+    ]
+}
